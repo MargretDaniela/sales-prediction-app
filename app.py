@@ -8,7 +8,7 @@ from plotly.subplots import make_subplots
 
 st.set_page_config(
     page_title="AI Sales Prediction System",
-    page_icon="📊",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -135,10 +135,7 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
 
-
-# ══════════════════════════════════════════════════════════
 # PAGE 1 - PROJECT OVERVIEW
-# ══════════════════════════════════════════════════════════
 if page == "Project Overview":
 
     st.markdown("<h1 style='margin-bottom:4px;'>AI-Based Sales Prediction System</h1>", unsafe_allow_html=True)
@@ -231,9 +228,7 @@ if page == "Project Overview":
     st.plotly_chart(fig, use_container_width=True)
 
 
-# ══════════════════════════════════════════════════════════
 # PAGE 2 - DATA EXPLORATION
-# ══════════════════════════════════════════════════════════
 elif page == "Data Exploration":
 
     st.markdown("<h1>Data Exploration</h1>", unsafe_allow_html=True)
@@ -373,10 +368,7 @@ elif page == "Data Exploration":
         st.plotly_chart(fig, use_container_width=True)
         st.markdown("<div class='insight-box'>When oil prices dropped in 2015 sales also dipped. Ecuador's oil-dependent economy makes <b style='color:#64ffda'>dcoilwtico</b> a meaningful predictor.</div>", unsafe_allow_html=True)
 
-
-# ══════════════════════════════════════════════════════════
 # PAGE 3 - MODEL ANALYSIS
-# ══════════════════════════════════════════════════════════
 elif page == "Model Analysis":
 
     st.markdown("<h1>Model Analysis</h1>", unsafe_allow_html=True)
@@ -487,9 +479,7 @@ elif page == "Model Analysis":
         st.markdown("<div class='insight-box'><b style='color:#00b4d8'>Calendar features</b> (month, week_of_year, day_of_week) together contribute around 12% capturing seasonality.</div>", unsafe_allow_html=True)
 
 
-# ══════════════════════════════════════════════════════════
 # PAGE 4 - LIVE PREDICTION
-# ══════════════════════════════════════════════════════════
 elif page == "Live Prediction":
 
     st.markdown("<h1>Live Sales Prediction</h1>", unsafe_allow_html=True)
