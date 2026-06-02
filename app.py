@@ -346,10 +346,10 @@ elif page == "Model Analysis":
         text=[f"{v:.1f}%" for v in imp_df["importance"]],
         textposition="outside", textfont=dict(color=C["muted"],size=10)
     ))
-    fig.update_layout(**PLOTLY_LAYOUT,height=580,
+    fig.update_layout(**{**PLOTLY_LAYOUT, "margin": dict(l=160,r=60,t=50,b=40)}, height=580,
         title="Feature Importance — Contribution to Reducing Prediction Error",
-        xaxis_title="Importance (%)", margin=dict(l=160,r=60,t=50,b=40))
-    st.plotly_chart(fig, use_container_width=True)
+        xaxis_title="Importance (%)")
+        st.plotly_chart(fig, use_container_width=True)
 
     col1,col2,col3 = st.columns(3)
     with col1: st.markdown("<div class='insight-box'><b style='color:#64ffda'>sales_lag_365</b> is the strongest feature — what sold this time last year best predicts what will sell this year.</div>", unsafe_allow_html=True)
